@@ -1,0 +1,11 @@
+Build a functional ServiceNow Historical Ticket-Based RCA POC using Python, Streamlit, Pandas, rank-bm25, and GitHub Copilot SDK.
+
+1. Import ServiceNow ticket CSV/JSON files and preprocess text while preserving technical error codes, negations, and original fields.
+2. Store processed tickets in an array of Python dictionaries. No database is needed for this POC.
+3. Implement BM25 keyword search to retrieve the top 5 relevant historical tickets, filtered by assignment group.
+4. Send the new incident and retrieved historical evidence to Copilot SDK to generate the likely root cause, recommended resolution, supporting ticket IDs, reasoning, and uncertainty. Never invent evidence.
+5. Build a clean, professional black-and-white Streamlit UI with ticket upload, assignment-group selection, incident description input, ranked search results, similarity scores, and the final RCA recommendation.
+6. Handle missing data, empty results, loading states, and API errors. Keep preprocessing, retrieval, LLM integration, and UI modular.
+7. Include requirements.txt, .env.example, README, and sample ticket data.
+
+Build a complete, working local POC, not a mockup. Inspect the existing project before modifying it and reuse compatible code. Keep BM25 functional independently of the LLM. Do not implement direct ServiceNow integration or automatic incident updates. Store credentials in environment variables and never hardcode secrets.
